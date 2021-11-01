@@ -1,7 +1,7 @@
 ---
 title: "Markdown Common Elements"
 layout: post
-date: 2016-02-24 22:44
+date: 2021-11-01 15:07
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
@@ -9,11 +9,19 @@ tag:
 - elements
 star: true
 category: blog
-author: johndoe
-description: Markdown summary with different options
+author: ire4564
+description: Markdown summary with different optionsBasic formatting
 ---
 
+
+
 ## Basic formatting
+
+
+
+아래는 마크다운 예시 파일입니다. 제대로 올라가는지 테스트!
+
+
 
 This note **demonstrates** some of what [Markdown][1] is *capable of doing*.
 
