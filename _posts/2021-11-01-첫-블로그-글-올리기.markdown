@@ -1,5 +1,5 @@
 ---
-title: "Markdown Common Elements"
+title: "1일 1커밋을 위해 깃 블로그를 다시 만들었다"
 layout: post
 date: 2021-11-01 15:07
 image: /assets/images/markdown.jpg
