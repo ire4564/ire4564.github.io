@@ -29,7 +29,8 @@ description: Markdown summary with different optionsBasic formatting브
 4. DOM과 CSSOM을 조합하여 렌더 트리(Render Tree)를 구축한다.
 5. 뷰 포트 기반으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다. (Layout/Reflow)단계
 6. 계산한 위치 및 크기를 기반으로 화면에 그리는 Paint 단계를 거친다.
-7. 
+
+
 
 -----
 
