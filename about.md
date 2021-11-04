@@ -4,7 +4,9 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p><b>Time is flying, Never to return.</b>
+<br/>
+
+<p><b>Time is flying, Never to return.</b><br/>
 지나간 시간은 되돌릴 수 없기에, 어떤 일이든지 매사에 집중하며 즐깁니다. 좋은 환경에서 좋은 사람들과 함께 즐겁게 일하는 것이 매일의 꿈입니다. 
 그런 사람이 되기 위해서, 오늘도 노력하는 사람입니다.</p>
 
