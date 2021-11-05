@@ -1,0 +1,157 @@
+---
+title: "[Info] Commit Convention"
+layout: post
+date: 2021-11-05 15:50
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- markdown
+- elements
+star: false
+category: blog
+author: ire4564
+description: Markdown summary with different optionsBasic formatting브
+---
+
+
+
+-----
+
+<h1>Commit Convention</h1>
+
+<br/>
+
+<h3>메세지 구조</h3>
+
+```
+type(옵션): [#issueNumber] Subject //제목
+body(옵션): //본문
+footer(옵션): //꼬릿말
+```
+
+<br/>
+
+<h3>제목 작성법</h3>
+
+> 타입
+
+![image-20211105154557900](C:\Users\ire45\AppData\Roaming\Typora\typora-user-images\image-20211105154557900.png)
+
+(출처: https://url.kr/d2vj3z)
+
+<br/>
+
+---
+
+<h3>태그 작성법</h3>
+
+":"를 붙여 제목과 구별할 수 있도록 한다.
+
+> 1. 기능
+> 2. 개선
+> 3. 그 외
+
+<h3>기능</h3>
+
+Feat, Fix, Design, !BREAKING CHANGE 태그가 기능 관련 태그이다.
+
+```
+Feat: 새로운 기능 추가
+Fix: 버그 고치기
+Design: CSS, UI 변경
+!BREAKING CHANGE: 커다란 API 변경 경우, DB 테이블 경우, 치명적 버그 경우
+```
+
+<h3>개선</h3>
+
+Sytle, Refactor, Comment 태그가 개선 태그이다.
+
+```
+Style: 코드 포맷 변경, 세미클론 누락, 코드 수정 없는 경우
+Refactor: 프로덕션 코드 리팩토링, 새로운 기능이나 버그 수정 없이 현재 기능 개선
+Comment: 필요한 주석 추가 및 변경
+```
+
+<h3>그 외</h3>
+
+Docs, Test, Chore, Rename, Remove 태그가 그외 태그이다.
+
+```
+Docs: 문서를 수정한 경우
+Test: 테스트 추가, 테스트 리팩토링 
+Chore: 빌드 태스크 업데이트, 패키지 매니저 설정할 경우
+Rename: 파일 혹은 폴더 명 수정하는 경우
+Remove: 사용하지 않는 파일 혹은 폴더 삭제하는 경우
+```
+
+---
+
+<br/>
+
+<h3>제목은 어떻게 적는가?</h3>
+
+규칙은 아래와 같다.
+
+> 1. 제목의 처음은 동사 원형으로 시작한다.
+> 2. 총 글자 수는 50자 이내로 작성한다.
+> 3. 마지막에 특수 문자는 삽입하지 않는다. (마침표/느낌표/물음표)
+> 4. 제목은 개조식 구문으로 작성한다.
+> 5. (영어) 첫 글자 대문자로 작성한다.
+> 6. (영어) Fix, Add, Change 명령어로 시작한다.
+
+ex) Feat: "Add getData API function"
+
+-----
+
+<br/>
+
+<h2>커밋 메세지 이모지</h2>
+
+| **Emoji** | **Description**                                              |
+| --------- | ------------------------------------------------------------ |
+| 🎨         | 코드의 **형식** / 구조를 개선 할 때                          |
+| 📰         | **새 파일을** 만들 때                                        |
+| 📝         | **사소한 코드 또는 언어**를 변경할 때                        |
+| 🐎         | **성능을** 향상시킬 때                                       |
+| 📚         | **문서를** 쓸 때                                             |
+| 🐛         | **버그** reporting할 때, [@FIXME](https://github.com/slashsbin/styleguide-todo-grammar#bug-report) 주석 태그 삽입 |
+| 🚑         | **버그를** 고칠 때                                           |
+| 🐧         | **리눅스에서** 무언가를 고칠 때                              |
+| 🍎         | **Mac OS에서** 무언가를 고칠 때                              |
+| 🏁         | **Windows에서** 무언가를 고칠 때                             |
+| 🔥         | **코드 또는 파일 제거**할 때 , @CHANGED주석 태그와 함께      |
+| 🚜         | **파일 구조를 변경할** 때 . 🎨과 함께 사용                    |
+| 🔨         | 코드를 **리팩토링** 할 때                                    |
+| ☔️         | **테스트를** 추가 할 때                                      |
+| 🔬         | **코드 범위를** 추가 할 때                                   |
+| 💚         | **CI** 빌드를 고칠 때                                        |
+| 🔒         | **보안을** 다룰 때                                           |
+| ⬆️         | **종속성을** 업그레이드 할 때                                |
+| ⬇️         | **종속성을** 다운 그레이드 할 때                             |
+| ⏩         | 이전 버전 / 지점에서 **기능**을 **전달할** 때                |
+| ⏪         | 최신 버전 / 지점에서 **기능**을 **백 포트** 할 때            |
+| 👕         | **linter** / strict / deprecation 경고를 제거 할 때          |
+| 💄         | **UI** / style 개선시                                        |
+| ♿️         | **접근성을** 향상시킬 때                                     |
+| 🚧         | **WIP** (진행중인 작업)에 커밋, @REVIEW주석 태그와 함께 사용 |
+| 💎         | New **Release**                                              |
+| 🔖         | 버전 **태그**                                                |
+| 🎉         | **Initial** Commit                                           |
+| 🔈         | **로깅을** 추가 할 때                                        |
+| 🔇         | **로깅을** 줄일 때                                           |
+| ✨         | **새로운** 기능을 소개 할 때                                 |
+| ⚡️         | 도입 할 때 **이전 버전과 호환되지 않는** 특징, @CHANGED주석 태그 사용 |
+| 💡         | 새로운 **아이디어**, @IDEA주석 태그                          |
+| 🚀         | 배포 / **개발 작업** 과 관련된 모든 것                       |
+| 🐘         | **PostgreSQL** 데이터베이스 별 (마이그레이션, 스크립트, 확장 등) |
+| 🐬         | **MySQL** 데이터베이스 특정 (마이그레이션, 스크립트, 확장 등) |
+| 🍃         | **MongoDB** 데이터베이스 특정 (마이그레이션, 스크립트, 확장 등) |
+| 🏦         | **일반 데이터베이스** 별 (마이그레이션, 스크립트, 확장명 등) |
+| 🐳         | **도커** 구성                                                |
+| 🤝         | **파일을 병합** 할 때                                        |
+
+출처: https://overcome-the-limits.tistory.com/entry/협업-협업을-위한-기본적인-git-커밋컨벤션-설정하기 [Plus Ultra]
+
+
+
+코드 컨벤션 꼭 지키도록 노력하자!
