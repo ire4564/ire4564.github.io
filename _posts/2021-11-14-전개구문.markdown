@@ -1,0 +1,115 @@
+---
+title: "[JS] 전개구문"
+layout: post
+date: 2021-11-14 17:50
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- markdown
+- elements
+star: false
+category: blog
+author: ire4564
+description: Markdown summary with different optionsBasic formatting
+---
+
+
+
+-----
+
+<h1>전개구문</h1>
+
+<br/>
+
+전개 하니까 주술회전의 영역전개가 생각났다... 료이키텐카이 가 아니라 오늘은 전개구문에 대해서 봤다.
+
+전개 구문을 사용하는 이유는, 배열이나 문자열과 같이 반복 가능한 문자를 0개 이상의 인수 또는 요소(배열 리터럴의 경우)로 확장하여 0개 이상의 키-값의 쌍으로 객체로 확장시킬 수 있기 때문이다. 이게 무슨 말인지는 아래에서 계속 살펴보자.
+
+<br/>
+
+<h3>구문 첫 예시</h3>
+
+``````
+function sum(x, y, z) {
+	return x + y + z;
+}
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers)) //expect output: 6
+``````
+
+이와 같이 Func(...iterableObj)의 구조를 가지고 있다.
+
+<br/>
+
+<h3>사용 장점</h3>
+
+많은 점들이 있지만 우선적으로 이해가 되는 부분만 적어보았다.
+
+1. apply()를 대체할 수 있다.
+
+   ```
+   //본래 써야 하는 코드
+   function myFunction(x, y, z) {}
+   var args = [0, 1, 2];
+   myFunction.apply(null, args);
+   
+   //전개구문 사용
+   function myFunction(x, y, z) {}
+   var args = [0, 1, 2];
+   myFunction(...args);
+   ```
+
+   <br/>
+
+2. new에 적용할 수 있다.
+   그런데 이 부분은 구체적으로 이해가 되지 않아서 나중에 여쭤봐야겠다.
+
+   ```
+   //전개구문 사용
+   var dateFields = [1920, 0, 1];
+   var d = new Date(...dateFields);
+   ```
+
+   <br/>
+
+3. 배열 리터럴에서 다양하게 사용할 수 있다. (복사, 연결)
+   배열에서 강력하게 쓰일 수 있다. 
+
+   ```
+   //배열 전개 & push(), splice(), concat()대신 사용할 수 있다.
+   var parts = ['s', 'k'];
+   var lyric = ['a', ...parts, 'b', 'c'];
+   
+   //배열 복사하기 
+   //: 주의점) 1레벨 깊이에서 효과적으로 동작하므로 다차원 배열에는 효과적이지 않을 수 있다.
+   var arr = [1, 2, 3];
+   var arr2 = [...arr];
+   arr.push(2) //-> [1, 2, 3, 4]가 된다.
+   
+   //배열 연결하기 (기본)
+   var arr1 = [0, 1, 2];
+   var arr2 = [3, 4, 5];
+   arr = arr1.concat(arr2);
+   
+   //배열 연결하기 (전개구문)
+   var arr1 = [0, 1, 2];
+   var arr2 = [3, 4, 5];
+   arr = [...arr1, ...arr2]; //완전 간편!
+   ```
+
+   
+
+4. 객체 리터럴에서 쉽게 전개할 수 있다.
+
+   ```
+   var obj1 = { foo: 'bar', x: 42 };
+   var obj2 = { foo: 'baz', y: 13 };
+   
+   var clonedObj = { ...obj1 };
+   // Object { foo: "bar", x: 42 }
+   
+   var mergedObj = { ...obj1, ...obj2 };
+   // Object { foo: "baz", x: 42, y: 13 }
+   ```
+
